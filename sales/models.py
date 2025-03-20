@@ -6,6 +6,7 @@ from utils.models import BaseModel
 
 # Create your models here.
 
+
 class Order(BaseModel):
     order_number = models.CharField(max_length=100)
     customer_name = models.CharField(max_length=100)
@@ -21,7 +22,8 @@ class Order(BaseModel):
         return self.order_number
 
     class Meta:
-        verbose_name_plural = 'Orders'
+        verbose_name_plural = "Orders"
+
 
 class OrderItem(BaseModel):
     order = models.ForeignKey(Order, on_delete=models.CASCADE)
@@ -35,4 +37,4 @@ class OrderItem(BaseModel):
         return self.product_name
 
     class Meta:
-        verbose_name_plural = 'Order Items'
+        verbose_name_plural = "Order Items"

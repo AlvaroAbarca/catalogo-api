@@ -1,1 +1,1 @@
-uv run uvicorn main:asgi:application --reload --host
+uv run uvicorn main.asgi:application --reload --host
